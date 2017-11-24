@@ -1,0 +1,13 @@
+{
+    "name": "tuhu",
+    "main": "index.html",
+    "bg-script":"app.js",
+    "inject_js_start":"",
+    "inject_js_end":"",
+    "window": {
+        "show_in_taskbar":true,
+        "show":true,
+        "width": 1245,
+        "height": 695
+    }
+}

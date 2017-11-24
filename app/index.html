@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+        var nw=require('nw.gui');
+        
+        function reloadDev(){
+          var win=nw.Window.get();
+          console.log(win);
+          win.showDevTools();
+        }
+      </script>
+     <style>
+     button{
+        background-color: #e7e7e7; /* Green */
+        border: none;
+        color: black;;
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 5px 10px;
+        font-weight: 400;
+        margin-top:10px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        user-select: none;
+        -webkit-font-smoothing: antialiased;
+    }
+     table th,table td{text-align: left;padding: 5px;}
+     </style>
+  </head>
+  <body>
+    <h1>nwjs hellword demo!<button onclick="reloadDev()">reloadDev</button></h1>
+    <table>
+      <thead>
+        <th>window</th>
+        <th>menu</th>
+        <th>tray</th>
+        <th>notification</th>
+        <th>clipboard</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <button id="addWindow">add Window</button>
+            <button id="addBadge">addBadge</button>
+            <button id="fullScreen">fullScreen</button>
+            <button id="leaveFullScreen">leaveFullScreen</button>
+            <a href="http://www.sina.cn/">sina</a><br/>
+            <a target="_blank" href="http://www.tuhu.cn">tuhu</a><br/>
+            <a target="_blank" href="http://www.baidu.com">baidu</a><br/>
+            <a target="_blank" href="https://dl.nwjs.io/v0.25.4/nwjs-v0.25.4-win-x64.zip">nwjs-v0.25.4-win-x64.zip</a>
+          </td>
+          <td></td>
+          <td>
+              <button id="addTray">add tray</button>
+          </td>
+          <td>
+              <button id="notification">add notification</button>
+          </td>
+          <td>
+            <button id="getClipboard">getClipboard</button>
+            <textarea id="clipboardText"></textarea>
+            <button id="setClipboard">setClipboard</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    
+    <script src="lib/menu.js"></script>
+    <script src="lib/tray.js"></script>
+    <script src="lib/window.js"></script>
+    <script src="lib/notification.js"></script>
+    <script src="lib/clipboard.js"></script>
+  </body>
+</html>
